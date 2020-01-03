@@ -23,4 +23,29 @@ function getNthFib(n) {
     return  getNthFib(n-1) + getNthFib(n-2);
 }
 
+// O(n) time | O(n) space
+
+let hash = {};
+
+function getNthFib(n) {
+    // Write your code here.
+    if(n === 2) {
+        return 1;
+    }
+
+    if(n === 1) {
+        return 0;
+    }
+    
+    if(n in hash) {
+        return hash[n];
+    }
+    
+    hash[n] = getNthFib(n-1) + getNthFib(n-2);
+    
+    return hash[n];
+}
+
+console.log(getNthFib(6));
+
 console.log(getNthFib(6));
