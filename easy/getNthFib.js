@@ -24,7 +24,6 @@ function getNthFib(n) {
 }
 
 // O(n) time | O(n) space
-
 let hash = {};
 
 function getNthFib(n) {
