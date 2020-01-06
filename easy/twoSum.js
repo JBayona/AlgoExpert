@@ -21,4 +21,22 @@ function twoSum(array, target) {
     return result;
 }
 
+// O(n)
+function twoSum(array, target) {
+    let hash = {};
+    var result = [];
+
+    // Check each element in the array
+    for(let i = 0; i < array.length; i++) {
+        let tmp = target - array[i];
+        if(tmp in hash) {
+            result.push([hash[tmp], array[i]]);
+        }
+
+        hash[array[i]] = array[i];
+    }
+
+    return result;
+}
+
 console.log(twoSum([3, 5, 2, -4, 8, 11], 7));
