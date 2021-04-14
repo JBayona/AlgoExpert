@@ -19,6 +19,26 @@ Output: false
 https://leetcode.com/problems/path-sum/
 */
 
+// Opción 1
+var hasPathSum = function(root, targetSum) {
+    return helper(root, targetSum);
+};
+
+function helper(root, target) {
+    if(!root) {
+        return 0;
+    }
+    
+    target -= root.val;
+    // Check if the node is a leaf node
+    if(!root.left && !root.right && target === 0) {
+        return true;
+    }
+    
+    return helper(root.left, target) || helper(root.right, target);
+}
+
+// Opción 2
 var hasPathSum = function(root, targetSum) {
     return helper(root, targetSum, 0);
 };
