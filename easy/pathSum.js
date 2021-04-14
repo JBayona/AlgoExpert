@@ -19,6 +19,7 @@ Output: false
 https://leetcode.com/problems/path-sum/
 */
 
+// DFS
 // Opción 1
 var hasPathSum = function(root, targetSum) {
     return helper(root, targetSum);
