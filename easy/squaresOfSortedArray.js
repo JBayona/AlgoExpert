@@ -33,7 +33,7 @@ var sortedSquares = function(nums) {
             result[index] = leftValue;
             left++;
         }
-        index--
+        index--;
     }
     return result;
 };
