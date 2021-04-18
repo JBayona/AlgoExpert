@@ -23,6 +23,7 @@ Output: 1
 https://leetcode.com/problems/maximum-depth-of-binary-tree/
 */
 
+// Time O(N)
 var maxDepth = function(root) {
     return hieghtTree(root);
 };
